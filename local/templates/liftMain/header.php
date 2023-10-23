@@ -12,10 +12,17 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <head>
     <?php $APPLICATION->ShowHead(); ?>
     <title><?php $APPLICATION->ShowTitle(); ?></title>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
     <?php 
-    Asset::getInstance()->addCss(DEFAULT_TEMPLATE_PATH . '/css/style.css');
-    Asset::getInstance()->addJs(DEFAULT_TEMPLATE_PATH . '/js/jquery-1.11.1.min.js');
+    Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/style.css');
+    // Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/style-vue.css');
+    // Asset::getInstance()->addCss(SITE_TEMPLATE_PATH . '/css/bootstrap_ranepa.css');
+
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/jquery-1.11.1.min.js');
+    Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vue@2.7.14.dev.js');
+	// Asset::getInstance()->addJs(SITE_TEMPLATE_PATH . '/js/vue-components-v1.js');
+    
 
     Asset::getInstance()->addString('<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />');
     Asset::getInstance()->addString('<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">');
@@ -30,9 +37,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="wrap">
         <div class="header-top-left">
                 <div class="logo">
-                    <a href="index.html"><h1>SHARE</h1>
-                        <h2>The Blog</h2>
-                    </a>
+                    
                 </div>
                 <?$APPLICATION->IncludeComponent("bitrix:menu", "main", Array(
                     "ALLOW_MULTI_SELECT" => "N",	// Разрешить несколько активных пунктов одновременно
@@ -51,29 +56,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     false
                 );?>
         <div class="clear"></div>
-    </div>  
-        <div class="header-top-right">
-                    <div class="social-icons">			
-                            <ul>
-                                <li><a class="youtube" href="#" target="_blank"><span>Youtube</span></a></li>
-                                <li><a class="facebook" href="#" target="_blank"><span>Facebook</span> </a></li>
-                                <li><a class="twitter" href="#" target="_blank"><span>Twitter</span> </a></li>
-                                <li><a class="skype" href="#" target="_blank"><span>Skype</span> </a></li>
-                                <li><a class="likedin" href="#" target="_blank"><span>Likedin</span> </a></li>
-                                <li><a class="vimeo" href="#" target="_blank"><span>vimeo</span> </a></li>
-                                <div class="clear"></div>
-                            </ul>
-                        </div>   	   
-                                <div class="search_box">
-                                    <form>
-                                        <input type="text" class="text-box" placeholder="Search for Blog"><input type="submit" value="" />
-                                    </form>
-                            </div>
-                        <div class="clear"></div>
-                    </div>
-                    <div class="clear"></div>
+    </div>
+
+    <div class="header-top-right">
+                <div class="clear"></div>
                 </div>
+                <div class="clear"></div>
             </div>
+        </div>
     </div>
     <!--------------------- Main Content ------------------->
     <div class="wrap">

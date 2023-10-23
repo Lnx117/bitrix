@@ -1,0 +1,74 @@
+/* Общие стили для формы */
+#myForm {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Стили для строки с полями ФИО */
+.custom_row.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.custom_row.row label {
+    width: 100%;
+    font-weight: bold;
+}
+
+/* Стили для отдельного поля ввода */
+.form-control {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Стили для кнопки отправки */
+#submit {
+    background-color: #007BFF;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+#submit:hover {
+    background-color: #0056b3;
+}
+
+/* Стили для текстовой области */
+textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Дополнительные стили для определенных элементов */
+.my_row {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.col-md-4 {
+    width: 32%;
+}
+
+/* Стили для меток (label) */
+label {
+    font-weight: bold;
+}
+
+/* Отключение стандартного обвода полей ввода в браузерах */
+input:focus, textarea:focus {
+    outline: none;
+}

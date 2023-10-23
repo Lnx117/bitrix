@@ -20,13 +20,6 @@ $aMenuLinks = Array(
 		Array(), 
 		Array(), 
 		"" 
-	),
-	Array(
-		"Домой", 
-		"/", 
-		Array(), 
-		Array(), 
-		"" 
 	)
 );
 ?>
